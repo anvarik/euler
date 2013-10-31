@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
+/*
+ * http://projecteuler.net/problem=22
+ */
 public class prob22 {
 
 	public static void main(String[] args) {
