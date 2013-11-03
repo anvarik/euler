@@ -1,4 +1,3 @@
-package euler;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

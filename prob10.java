@@ -1,4 +1,3 @@
-package euler;
 /*
  * http://projecteuler.net/problem=10
  */
