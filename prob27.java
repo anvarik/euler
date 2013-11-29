@@ -1,38 +1,39 @@
 import java.util.ArrayList;
 
 /*
- * http://projecteuler.net/problem=26
+ * http://projecteuler.net/problem=27
  */
 public class prob27 {
 
 	private static ArrayList<Integer> primes = new ArrayList<Integer>();
 
 	public static void main(String[] args) {
-		 poly();
+		poly();
 	}
-	
-	private static void poly(){
+
+	private static void poly() {
 		findPrimesUnder1000();
 		int maxCount = 0;
 		int bigA = 0;
 		int bigB = 0;
-		for(int a = -999; a<1000; a++){
-			for(int b : primes){
+		for (int a = -999; a < 1000; a++) {
+			for (int b : primes) {
 				int count = 0;
-				for (int n=0; n<1000; n++){
-					int num = n*n + a*n + b;
-					if(num>0 && isPrime(num))
+				for (int n = 0; n < 1000; n++) {
+					int num = n * n + a * n + b;
+					if (num > 0 && isPrime(num))
 						count++;
-					else 
+					else
 						break;
 				}
-				if(count > maxCount){
+				if (count > maxCount) {
 					maxCount = count;
 					bigA = a;
 					bigB = b;
-					System.out.println("max: " + maxCount + " a: " + bigA + " b: " + bigB + "mult : " + bigA*bigB);
+					System.out.println("max: " + (maxCount - 1) + " a: " + bigA
+							+ " b: " + bigB + " mult : " + bigA * bigB);
 				}
-					
+
 			}
 		}
 	}
